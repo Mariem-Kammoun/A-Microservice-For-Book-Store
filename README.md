@@ -35,3 +35,11 @@ It uses also MomgoDB and Docker technologies.
 |  /books/n     |      PUT      |    Update a the n id book                            |
 |  /books/n     |      DELETE   |    Delete a the n id book                            | 
 |  /metrics     |      GET      |    Return the metrics provided by Prometheus         |
+
+## Testing:
+I used Postman to test my API.
+
+## Documenting:
+I used Swagger to document my REST-API.
+
+## Screenshots:
