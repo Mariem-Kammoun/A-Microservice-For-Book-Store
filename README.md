@@ -46,7 +46,7 @@ I used Postman to test my API.
 
 ![PUT_update_book](/images/Testing/4 PUT_update_book.PNG)
 
-![PUT_update_book](/images/Testing/PUT_update_book.PNG)
+![PUT_update_book2](/images/Testing/5 Update_done.PNG)
 
 ![Delete_book](/images/Testing/6 Delete book.PNG)
 
