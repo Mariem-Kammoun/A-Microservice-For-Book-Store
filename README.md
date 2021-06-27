@@ -6,12 +6,12 @@ A simple API that respects the REST architecture, implemented in the micro web f
 It uses also MomgoDB and Docker technologies.  
 
 ## Deploy:
-1. Clone this repository  : $ git clone https://github.com/Mariem-Kammoun/A-Microservice-For-Book-Store.git
-2. Change the current working directory : $ cd A-Microservice-For-Book-Store/
-3. Create the docker image : app-image   : $ docker build -t app-image . 
-4. Build and start our container $docker-compose up -d
-5. List all our active running containers to see our two containers running and be able to identify them by the ports
- that they run on $docker ps
+1. Clone this repository  : `$ git clone https://github.com/Mariem-Kammoun/A-Microservice-For-Book-Store.git `
+2. Change the current working directory : `$ cd A-Microservice-For-Book-Store/ `
+3. Create the docker image : app-image   : `$ docker build -t app-image . `
+4. Build and start our container `$docker-compose up -d `
+5. List all our active running containers to see our four containers running and be able to identify them by the ports
+ that they run on `$docker ps `
 
 ## Exposed Ports:
 
