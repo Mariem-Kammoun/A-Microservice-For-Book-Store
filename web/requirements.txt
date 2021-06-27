@@ -1,0 +1,4 @@
+flask  
+flask_restful
+pymongo
+prometheus_client == 0.11.0

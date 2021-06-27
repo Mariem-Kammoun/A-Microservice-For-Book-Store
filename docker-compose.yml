@@ -1,0 +1,55 @@
+version: "3"
+
+services: 
+  web: 
+    build: "./web"
+    ports: 
+      - "5000:5000"
+    networks:
+      - book_network
+    links: 
+      - my_db  #extra aliases, metadata
+    depends_on:
+      - "my_db"
+  my_db:
+    image: mongo
+    volumes:
+      - db-data:/data/db
+    networks:
+      - book_network
+  
+  prometheus:
+    image: prom/prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    networks:
+      - book_network
+    depends_on:
+      - web
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning  
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    networks:
+      - book_network
+    depends_on:
+      - prometheus  
+
+networks:
+  book_network:
+
+volumes:
+  db-data:
+  prometheus-data:
+  grafana_data:
+
