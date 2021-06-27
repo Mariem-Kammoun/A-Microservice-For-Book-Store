@@ -1,0 +1,165 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server bookstore server."
+  version: "1.0.0"
+  title: "Swagger Bookstore"
+  
+host: "bookstore.swagger.io"
+basePath: "/v2"
+schemes:
+- "http"
+paths:
+  /books:
+    post:
+      tags:
+      - "book"
+      summary: "Add a new pet to the store"
+      description: ""
+      operationId: "addBook"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Book object that needs to be added to the store"
+        required: true
+        schema:
+          $ref: "" 
+      responses:
+        "405":
+          description: "Invalid input"
+      security:
+      - bookstore_auth:
+        - "write:books"
+        - "read:books"
+    get:
+      tags:
+      - "book"
+      summary: "Find existing books"
+      description: ""
+      operationId: "FindBook"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Book object that needs to be readed"
+        required: true
+        schema:
+          $ref: ""  
+      responses:
+      
+        "404":
+          description: "Book not found"
+        
+      security:
+      - bookstore_auth:
+        - "write:books"
+        - "read:books"  
+  /books/{BookId}:      
+    get:
+      tags:
+      - "book"
+      summary: "Find an existing book"
+      description: ""
+      operationId: "getBookById"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "BookId"
+        description: "Book object that needs to be readed"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+      
+        "404":
+          description: "Book not found"
+        
+      security:
+      - bookstore_auth:
+        - "write:books"
+        - "read:books"
+        
+    put:
+      tags:
+      - "book"
+      summary: "Update an existing book"
+      description: ""
+      operationId: "updateBook"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "BookId"
+        description: "Book object that needs to be readed"
+        required: true
+        type: "integer"
+        format: "int64" 
+      responses:
+      
+        "404":
+          description: "Book not found"
+        
+      security:
+      - bookstore_auth:
+        - "write:books"
+        - "read:books"
+    delete:
+      tags:
+      - "book"
+      summary: "Delete an existing book"
+      description: ""
+      operationId: "DeleteBook"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "BookId"
+        description: "Book object that needs to be deleted"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        
+        "404":
+          description: "Book not found"
+        
+      security:
+      - bookstore_auth:
+        - "write:books"
+        - "read:books"    
+
+securityDefinitions:
+  bookstore_auth:
+    type: "oauth2"
+    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    flow: "implicit"
+    scopes:
+      write:books: "modify books in your account"
+      read:books: "read your books"
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
