@@ -23,7 +23,7 @@ It uses also MomgoDB and Docker technologies.
 |  Grafana      |      3000     |    3000       |
 
 ## Architecture:
-
+![Architecture](/images/architecture.png)
 
 ## Endpoints:
 
