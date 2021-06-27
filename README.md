@@ -40,17 +40,17 @@ It uses also MomgoDB and Docker technologies.
 I used Postman to test my API.
 ![GET_Books](/images/Testing/1.PNG)
 
-![POST_CreationBooks](/images/Testing/2 post_creation-book.PNG)
+![POST_CreationBooks](/images/Testing/2_post_creation-book.PNG)
 
-![GET_Add_Book](/images/Testing/3 Get_Add-book-done.PNG)
+![GET_Add_Book](/images/Testing/3_Get_Add-book-done.PNG)
 
-![PUT_update_book](/images/Testing/4 PUT_update_book.PNG)
+![PUT_update_book](/images/Testing/4_PUT_update_book.PNG)
 
-![PUT_update_book2](/images/Testing/5 Update_done.PNG)
+![PUT_update_book2](/images/Testing/5_Update_done.PNG)
 
-![Delete_book](/images/Testing/6 Delete book.PNG)
+![Delete_book](/images/Testing/6_Delete_book.PNG)
 
-![Delete_done](/images/Testing/7 delete donek.PNG)
+![Delete_done](/images/Testing/7_delete_done.PNG)
 
 ## Documenting:
 I used Swagger to document my REST-API. So, I created swagger_books files.
@@ -59,14 +59,14 @@ I used Swagger to document my REST-API. So, I created swagger_books files.
 ## Screenshots:
 ![Metrics](/images/Screenshots/metrics with docker_compose.PNG)
 
-![Grafana1](/images/Screenshots/grafana first dashboard.PNG)
+![Grafana1](/images/Screenshots/grafana_first_dashboard.PNG)
 
-![Grafana2](/images/Screenshots/grafana my-second dashboard with 2 panels.PNG)
+![Grafana2](/images/Screenshots/grafana_my_second_dashboard_with_2_panels.PNG)
 
-![Grafana3](/images/Screenshots/grafana panel 1.PNG)
+![Grafana3](/images/Screenshots/grafana_panel_1.PNG)
 
-![Grafana4](/images/Screenshots/grafana panel 1 prom query.PNG)
+![Grafana4](/images/Screenshots/grafana_panel_1_prom_query.PNG)
 
-![Grafana5](/images/Screenshots/grafana 2 panel.PNG)
+![Grafana5](/images/Screenshots/grafana_2_panel.PNG)
 
-![Grafana1](/images/Screenshots/grafana panel 2 editor.PNG)
+![Grafana6](/images/Screenshots/grafana_panel_2_editor.PNG)
